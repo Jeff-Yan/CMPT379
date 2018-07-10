@@ -1,0 +1,107 @@
+kickass: 
+L_1: t_0 = v * 4
+L_2: c[ t_0 ]  = val  
+L_3:  ret 
+L_4:  ret 
+f1: 
+L_6: c = 10  
+L_7: sum = 0  
+L_8: j = 1  
+L_9: t_1 = a + b
+L_10: t_2 = t_1 / 10
+L_11: t_3 = c - b
+L_12: i = t_2  
+L_13: t_4 = i < t_3
+L_14: if t_4 goto L_16
+L_15: ifFalse t_4 goto L_50
+L_16: sum = sum + i
+L_17: t_5 = i / j
+L_18: j = t_5  
+L_19: t_6 = j + 1
+L_20: t_7 = t_6 > i
+L_21: if t_7 goto L_23
+L_22: ifFalse t_7 goto L_26
+L_23: sum = sum - 1
+L_24: goto L_48
+L_25: goto L_44
+L_26: t_8 = sum + 1
+L_27: sum = t_8  
+L_28: k = 0  
+L_29: t_9 = k < i
+L_30: if t_9 goto L_32
+L_31: ifFalse t_9 goto L_44
+L_32: c = c + b
+L_33: t_10 = c > sum
+L_34: if t_10 goto L_36
+L_35: ifFalse t_10 goto L_42
+L_36: t_11 = j < sum
+L_37: if t_11 goto L_39
+L_38: ifFalse t_11 goto L_41
+L_39: goto L_44
+L_40: goto L_42
+L_41: goto L_42
+L_42: k = k + 1
+L_43: goto L_29
+L_44: t_12 = b / j
+L_45: t_13 = sum * t_12
+L_46: t_14 = e + t_13
+L_47: e = t_14  
+L_48: i = i + 1
+L_49: goto L_13
+L_50: sum ret 
+f2: 
+L_52: t_15 = b * 4
+L_53: t_16 = c[ t_15 ]  + b
+L_54: a = t_16  
+L_55: t_17 = a - 1
+L_56: t_18 = b - a
+L_57: t_18 param 
+L_58: t_17 param 
+L_59:  call 2
+L_60: t_19 =  > 0
+L_61: if t_19 goto L_63
+L_62: ifFalse t_19 goto L_69
+L_63: t_20 = f1 call 0
+L_64: t = t_20  
+L_65: t_21 = t * 4
+L_66: c[ t_21 ]  = 3  
+L_67: t_22 = a - t
+L_68: s = t_22  
+L_69: t_23 = s > 0
+L_70: if t_23 goto L_72
+L_71: ifFalse t_23 goto L_75
+L_72: t_24 = t < 0
+L_73: if t_24 goto L_75
+L_74: ifFalse t_24 goto L_84
+L_75: t_25 = s + t
+L_76: t_26 = c > t_25
+L_77: if t_26 goto L_79
+L_78: ifFalse t_26 goto L_84
+L_79: t_27 = b - a
+L_80: t_28 = a * t
+L_81: t_29 = t_27 != t_28
+L_82: if t_29 goto L_93
+L_83: ifFalse t_29 goto L_84
+L_84: "%d %d\n" param 
+L_85: t_30 = f1 call 0
+L_86: t_30 param 
+L_87: t param 
+L_88: s param 
+L_89:  call 2
+L_90:  param 
+L_91: "printf" call 3
+L_92: s ret 
+L_93: t ret 
+main: 
+L_95: x = 0xaaaef1  
+L_96: x = x + 0x11112
+L_97: t_31 = f1 call 0
+L_98: t_32 = x + t_31
+L_99: y param 
+L_100: x param 
+L_101: t_33 = f2 call 2
+L_102: t_34 = t_32 + t_33
+L_103: t_35 = 0 - t_34
+L_104: y = t_35  
+L_105: 0 ret 
+L_106: 

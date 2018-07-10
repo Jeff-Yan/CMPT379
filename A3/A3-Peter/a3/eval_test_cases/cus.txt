@@ -1,0 +1,15 @@
+class Program {
+
+int a , b, c;
+int x;
+
+
+
+int main () {
+
+	if (a % 3 == 2) {
+        a = 0;
+    }
+
+}
+}
